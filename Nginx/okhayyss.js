@@ -11,5 +11,30 @@
     if we cd into etc/nginx and then ls we see nginx.conf...
 
     this nginx.conf is the main file used to configure the nginx server to function
+
+    this is how u'd write an nginx.conf file in linux
 */
+events{
+
+}
+
+http{
+    server1{
+        listen 80;
+        server_name _;
+
+        location / {
+            return 200 "Nginx conf file...";
+        }
+    }
+
+    server2{
+        listen 8080;
+        server_name _;
+
+        location / {
+            return 200 "Nginx conf file...";
+        }
+    }
+}
 
